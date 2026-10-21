@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07050A"><title>KPay — мои заказы</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient-orbs" aria-hidden="true"><span class="ambient-orb ambient-orb-left"></span><span class="ambient-orb ambient-orb-right"></span></div>
+<header class="nav">
+<a class="brand" href="index.html" aria-label="KPay — главная"><img class="brand-logo" src="images/logo.png" alt="KPay"></a>
+<nav class="navlinks" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#catalog">Каталог</a><a href="index.html#how">Как это работает</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer">Поддержка</a></nav>
+<a class="orders" href="buy.html" aria-current="page">Мои заказы ↗</a>
+</header>
+<main class="orders-page-wrap">
+<section class="orders-page glass">
+<div class="orders-page-header">
+<div>
+<div class="eyebrow">Мои заказы</div>
+<h1>История покупок</h1>
+</div>
+<a class="btn btn-secondary" href="index.html">Вернуться на главную</a>
+</div>
+<div class="orders-list" id="ordersList"><div class="order-empty">Пока заказов нет. Создайте первый — и он появится здесь.</div></div>
+</section>
+</main>
+<footer id="footer"><div class="wrap foot"><a class="brand" href="index.html" aria-label="KPay — главная"><img class="brand-logo" src="images/logo.png" alt="KPay"></a><div>© 2026 <span lang="en">KPay</span> · Цифровые товары и услуги</div><nav class="footlinks"><a href="index.html#catalog">Каталог</a><a href="index.html#how">Как это работает</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer" data-toast="Контакты поддержки появятся позже">Поддержка</a><a href="index.html#footer" data-toast="Правовая информация появится позже">Правовая информация</a></nav></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js?v=20261021"></script>
+</body>
+</html>
