@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Проверка NS API — KPay</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #0b0910; color: #f4f0fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+    main { width: min(100%, 520px); padding: 32px; border: 1px solid #30283b; border-radius: 20px; background: #15111c; }
+    h1 { margin: 0 0 8px; font-size: 1.7rem; }
+    p { color: #bcb3c7; line-height: 1.55; }
+    label { display: block; margin: 18px 0 7px; font-size: .95rem; }
+    input { width: 100%; padding: 12px 14px; border: 1px solid #40364d; border-radius: 10px; background: #0d0a12; color: inherit; font: inherit; }
+    input:focus { outline: 2px solid #9c75e8; outline-offset: 2px; }
+    button { width: 100%; margin-top: 22px; padding: 13px; border: 0; border-radius: 10px; background: #a779f5; color: #170d27; font: inherit; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: .65; cursor: wait; }
+    #result { min-height: 1.5em; margin-top: 18px; }
+    #result[data-state="success"] { color: #75e5ad; }
+    #result[data-state="error"] { color: #ff8a9a; }
+    .warning { margin-top: 22px; padding: 12px; border-radius: 10px; background: #211a29; font-size: .9rem; }
+    a { color: #c3a7ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Проверка NS API</h1>
+    <p>Проверь, принимаются ли данные API-аккаунта. Будет выполнен только запрос авторизации — заказ не создаётся.</p>
+    <form id="credentialsForm">
+      <label for="userId">USER_ID</label>
+      <input id="userId" name="userId" inputmode="numeric" autocomplete="off" placeholder="1234" required>
+
+      <label for="login">LOGIN</label>
+      <input id="login" name="login" autocomplete="off" placeholder="your_login" required>
+
+      <label for="password">PASSWORD</label>
+      <input id="password" name="password" type="password" autocomplete="new-password" placeholder="your_password" required>
+
+      <label for="secret">API_SECRET (Base64)</label>
+      <input id="secret" name="secret" type="password" autocomplete="new-password" placeholder="Настоящий Base64-секрет из кабинета" required>
+
+      <label for="baseUrl">BASE_URL</label>
+      <input id="baseUrl" name="baseUrl" type="url" value="https://api.ns.gifts" required>
+
+      <button id="submitButton" type="submit">Проверить подключение</button>
+    </form>
+    <p id="result" role="status" aria-live="polite"></p>
+    <p class="warning">Используй эту страницу только через локальный сервер KPay: <code>http://localhost:3000/ns-test.html</code>. Данные передаются локальному серверу для проверки и не сохраняются этой страницей. Не открывай её на публичном хостинге.</p>
+    <a href="/">Вернуться на сайт</a>
+  </main>
+  <script>
+    const form = document.querySelector('#credentialsForm');
+    const button = document.querySelector('#submitButton');
+    const result = document.querySelector('#result');
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      button.disabled = true;
+      result.dataset.state = '';
+      result.textContent = 'Проверяю подключение…';
+
+      const values = Object.fromEntries(new FormData(form));
+      try {
+        const response = await fetch('/api/ns/credentials-check', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(values),
+          cache: 'no-store'
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || 'Не удалось проверить подключение.');
+        result.dataset.state = 'success';
+        result.textContent = payload.message;
+      } catch (error) {
+        result.dataset.state = 'error';
+        result.textContent = error.message || 'Не удалось связаться с локальным сервером.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

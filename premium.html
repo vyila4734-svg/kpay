@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07050A"><title>Telegram Premium — KPay</title>
+<link rel="stylesheet" href="style.css?v=20261022-11">
+</head>
+<body class="telegram-order-page">
+<div class="ambient-orbs" aria-hidden="true"><span class="ambient-orb ambient-orb-left"></span><span class="ambient-orb ambient-orb-right"></span></div>
+<header class="nav">
+<a class="brand" href="index.html" aria-label="KPay — главная"><img class="brand-logo" src="images/logo.png" alt="KPay"></a>
+<nav class="navlinks" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#catalog">Каталог</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer">Поддержка</a></nav>
+<a class="orders" href="buy.html">Мои заказы ↗</a>
+<button class="menu" id="menu" aria-label="Открыть меню" aria-expanded="false">☰</button>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="index.html#catalog">Каталог</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer">Поддержка</a><a href="buy.html">Мои заказы</a></nav>
+<main><div class="wrap">
+<section class="steam steam-order-page">
+<div class="section-head"><div><div class="kicker">Подписка · Telegram</div><h1><span lang="en">Telegram Premium</span></h1></div><p>Укажите получателя и выберите срок подписки. Итоговая стоимость обновится автоматически.</p></div>
+<div class="form-layout">
+<article class="panel glass telegram-product" id="premium">
+<div class="telegram-product-head"><img class="telegram-product-logo" src="images/sad.png" alt=""><div><div class="kicker">Оформление подписки</div><h2 lang="en">Telegram Premium</h2></div></div>
+<div class="field"><label for="premiumUser">Telegram username</label><input id="premiumUser" placeholder="@username" maxlength="33" autocomplete="off" lang="en"><span class="input-hint">Введите username получателя, например @example.</span></div>
+<fieldset class="field duration-field"><legend class="field-label" id="periodLabel">Выберите срок подписки</legend><div class="premium-options" id="periodOptions" role="radiogroup" aria-labelledby="periodLabel"><label class="duration-choice selected"><input type="radio" name="period" value="3" data-period="3" data-service-id="2246" checked><span class="duration-choice-main"><strong>3 месяца</strong><span>Короткий срок</span></span></label><label class="duration-choice"><input type="radio" name="period" value="6" data-period="6" data-service-id="2247"><span class="duration-choice-main"><strong>6 месяцев</strong><span>Полгода</span></span></label><label class="duration-choice"><input type="radio" name="period" value="12" data-period="12" data-service-id="2248"><span class="duration-choice-main"><strong>12 месяцев</strong><span>Годовая подписка</span></span></label></div></fieldset>
+<span id="periodValue" class="visually-hidden">3 месяца</span><div class="sumline total"><span>К оплате</span><strong id="premiumTotal">849 ₽</strong></div><button class="btn btn-primary order-submit" type="button" data-order-type="premium">Создать заказ <span aria-hidden="true">↗</span></button><p class="notice notice-left" id="premiumNotice" aria-live="polite">Создание заказа не списывает баланс; оплата пока не подключена.</p>
+</article>
+<aside class="side-stack"><div class="panel glass summary order-summary"><div class="summary-title"><span class="summary-step">ИТОГО</span><h2>Ваша подписка</h2></div><div class="sumline"><span>Получатель</span><strong id="premiumSummaryRecipient">@username</strong></div><div class="sumline"><span>Срок</span><strong id="premiumSummaryPeriod">3 месяца</strong></div><div class="sumline total"><span>К оплате</span><strong id="premiumSummaryTotal">849 ₽</strong></div><p class="summary-footnote">Проверьте username и срок перед созданием заказа.</p></div></aside>
+</div>
+</section>
+</div></main>
+<footer id="footer"><div class="wrap foot"><a class="brand" href="index.html" aria-label="KPay — главная"><img class="brand-logo" src="images/logo.png" alt="KPay"></a><div>© 2026 <span lang="en">KPay</span> · Цифровые товары и услуги</div><nav class="footlinks"><a href="index.html#catalog">Каталог</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer" data-toast="Контакты поддержки появятся позже">Поддержка</a></nav></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js?v=20261022-11"></script>
+</body>
+</html>

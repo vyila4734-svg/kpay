@@ -1,0 +1,48 @@
+[
+  {
+    "id": "043df33a-7e3a-4025-831d-03ea81f38aaa",
+    "ownerId": "7f7c1aa5-d42d-48ca-84ed-a8ff19be57ae",
+    "title": "Пополнение Steam",
+    "meta": "Логин: ilyakirrr17062011",
+    "amount": 1000,
+    "amountUsd": 12.2,
+    "providerTotal": "11.9560",
+    "status": "Ожидает оплаты",
+    "statusClass": "pending",
+    "date": "22.10.2026, 21:39"
+  },
+  {
+    "id": "5764271a-0c8c-40f8-b183-b51a0b5f2f3f",
+    "ownerId": "7f7c1aa5-d42d-48ca-84ed-a8ff19be57ae",
+    "title": "Пополнение Steam",
+    "meta": "Логин: ilyakirrr17062011",
+    "amount": 2000,
+    "amountUsd": 24.39,
+    "providerTotal": "23.9022",
+    "status": "Ожидает оплаты",
+    "statusClass": "pending",
+    "date": "22.10.2026, 21:40"
+  },
+  {
+    "id": "3b4d979a-e60f-4a80-b21b-6da154097e14",
+    "ownerId": "7f7c1aa5-d42d-48ca-84ed-a8ff19be57ae",
+    "title": "Telegram Stars",
+    "meta": "Получатель: @ilyakirrr · 50 ⭐",
+    "amount": 125,
+    "providerTotal": "0.7995",
+    "status": "Ожидает оплаты",
+    "statusClass": "pending",
+    "date": "22.10.2026, 22:59"
+  },
+  {
+    "id": "85ebedc2-7fa7-4829-8de9-4719f6054274",
+    "ownerId": "7f7c1aa5-d42d-48ca-84ed-a8ff19be57ae",
+    "title": "Telegram Stars",
+    "meta": "Получатель: @ilyakirrr · 1 000 ⭐",
+    "amount": 2500,
+    "providerTotal": "15.9895",
+    "status": "Ожидает оплаты",
+    "statusClass": "pending",
+    "date": "22.10.2026, 22:59"
+  }
+]

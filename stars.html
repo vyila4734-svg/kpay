@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07050A"><title>Telegram Stars — KPay</title>
+<link rel="stylesheet" href="style.css?v=20261022-11">
+</head>
+<body class="telegram-order-page">
+<div class="ambient-orbs" aria-hidden="true"><span class="ambient-orb ambient-orb-left"></span><span class="ambient-orb ambient-orb-right"></span></div>
+<header class="nav">
+<a class="brand" href="index.html" aria-label="KPay — главная"><img class="brand-logo" src="images/logo.png" alt="KPay"></a>
+<nav class="navlinks" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#catalog">Каталог</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer">Поддержка</a></nav>
+<a class="orders" href="buy.html">Мои заказы ↗</a>
+<button class="menu" id="menu" aria-label="Открыть меню" aria-expanded="false">☰</button>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="index.html#catalog">Каталог</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer">Поддержка</a><a href="buy.html">Мои заказы</a></nav>
+<main><div class="wrap">
+<section class="steam steam-order-page">
+<div class="section-head"><div><div class="kicker">Цифровые подарки · Telegram</div><h1><span lang="en">Telegram Stars</span></h1></div><p>Укажите получателя и выберите количество звёзд. Итоговая стоимость обновится автоматически.</p></div>
+<div class="form-layout">
+<article class="panel glass telegram-product" id="stars">
+<div class="telegram-product-head"><img class="telegram-product-logo" src="images/asda.png" alt=""><div><div class="kicker">Заказ звёзд</div><h2 lang="en">Telegram Stars</h2></div></div>
+<div class="field"><label for="recipient">Telegram username</label><input id="recipient" placeholder="@username" maxlength="33" autocomplete="off" lang="en"><span class="input-hint">Введите username получателя, например @example.</span></div>
+<div class="field"><span class="field-label">Выберите пакет</span><div class="amounts star-amounts" id="starAmounts"><button class="amount selected" data-stars="50" data-service-id="2249" type="button" aria-pressed="true"><span class="amount-count">50 ⭐</span></button><button class="amount" data-stars="100" data-service-id="2250" type="button" aria-pressed="false"><span class="amount-count">100 ⭐</span></button><button class="amount" data-stars="150" data-service-id="2251" type="button" aria-pressed="false"><span class="amount-count">150 ⭐</span></button><button class="amount" data-stars="250" data-service-id="2252" type="button" aria-pressed="false"><span class="amount-count">250 ⭐</span></button><button class="amount" data-stars="500" data-service-id="2253" type="button" aria-pressed="false"><span class="amount-count">500 ⭐</span></button><button class="amount" data-stars="1000" data-service-id="2254" type="button" aria-pressed="false"><span class="amount-count">1 000 ⭐</span></button><button class="amount" data-stars="1500" data-service-id="2255" type="button" aria-pressed="false"><span class="amount-count">1 500 ⭐</span></button><button class="amount" data-stars="2500" data-service-id="2256" type="button" aria-pressed="false"><span class="amount-count">2 500 ⭐</span></button></div></div>
+<div class="sumline total"><span>К оплате</span><strong id="starTotal">125 ₽</strong></div><button class="btn btn-primary order-submit" type="button" data-order-type="stars">Создать заказ <span aria-hidden="true">↗</span></button><p class="notice notice-left" id="starsNotice" aria-live="polite">Создание заказа не списывает баланс; оплата пока не подключена.</p>
+</article>
+<aside class="side-stack"><div class="panel glass summary order-summary"><div class="summary-title"><span class="summary-step">ИТОГО</span><h2>Ваш заказ</h2></div><div class="sumline"><span>Получатель</span><strong id="starSummaryRecipient">@username</strong></div><div class="sumline"><span>Количество</span><strong id="starSummaryQuantity">50 ⭐</strong></div><div class="sumline total"><span>К оплате</span><strong id="starSummaryTotal">125 ₽</strong></div><p class="summary-footnote">Проверьте username и количество перед созданием заказа.</p></div></aside>
+</div>
+</section>
+</div></main>
+<footer id="footer"><div class="wrap foot"><a class="brand" href="index.html" aria-label="KPay — главная"><img class="brand-logo" src="images/logo.png" alt="KPay"></a><div>© 2026 <span lang="en">KPay</span> · Цифровые товары и услуги</div><nav class="footlinks"><a href="index.html#catalog">Каталог</a><a href="index.html#faq"><span lang="en">FAQ</span></a><a href="index.html#footer" data-toast="Контакты поддержки появятся позже">Поддержка</a></nav></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js?v=20261022-10"></script>
+</body>
+</html>
